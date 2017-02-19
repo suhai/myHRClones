@@ -1,0 +1,139 @@
+<!-- modularize html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1" />
+  <title>Scribbler</title>
+
+  <!--Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Cherry+Cream+Soda' rel='stylesheet' type='text/css'>
+
+  <!-- Add stylesheets here -->
+  <link href="lib/css/bootstrap.css" rel="stylesheet">
+  <link href="lib/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
+  <link href="css/gamecanvas.css" rel="stylesheet">
+  <!-- Add libs here -->
+  <script src="lib/js/jquery.v2.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+</head>
+  <body>
+    <div class="title span10"><h1>SCRIBBLER</h1></div>
+    <div class="container media">
+      <div class="row pencil-container">
+        <div class="pencil-tip span1 offset1"></div>
+        <div class="pencil-start span1"></div>
+        <div class="span6">
+          <div class="game-info brown-pencil" id="textarea"> Welcome to Scribbler!</div>
+          <!-- <div id="textarea"></div> -->
+        </div>
+        <div class="pencil-end span1"></div>
+        <div class="pencil-eraser span1"></div>
+      </div>
+      <div class="row">
+        <div class="span2">
+          <span id="start-button" class="button green super-top-margin"><p><i class="icon-play-sign"></i>Start </p> </span>
+          <span id="save-button" class="button pink"> <p><a href="#" download="photo.png"><i class="icon-save"></i>Save </a></p> </span>
+          <span id="info-button" class="button gray"><p><i class="icon-info-sign"></i>Info </p> </span>
+        </div>
+        <div class="span8 stage">
+          <video id="main-video" class="main-video"   autoplay=""> </video>
+          <canvas id="main-canvas" class="main-canvas"></canvas>
+          <canvas id="offscreen-canvas" class="offscreen-canvas"></canvas>
+          <!--imaage tag with no src for saving canvas as image-->
+          <img id='main-image' class="main-image"/>
+          <div id="highlight"></div>
+          <!-- <div class="span7 attach-bottom"> -->
+            <ul class="color-palette span8">
+              <li class="red">Red</li>
+              <li class="orange">Orange</li>
+              <li class="yellow">Yellow</li>
+              <li class="green">Green</li>
+              <li class="blue">Blue</li>
+              <li class="purple">Purple</li>
+            </ul>
+          <!-- </div> -->
+        </div>
+        <div class="span2">
+           <span id="paint-button" class="button top-margin purple"> <p><i class="icon-pencil"></i>Draw</p></span>
+           <span id="eraser-button" class="button orange"> <p><i class="icon-eraser"></i>Erase</p></span>
+           <span id="speech-button" class="button blue"> <p><i class="icon-microphone"></i>Talk</p> </span>
+           <span id="picture-button" class="button yellow"><p><i class="icon-camera"></i>Pic</p></span>
+        </div>
+      </div> <!-- ROW -->
+      <!-- MODAL -->
+      <div class="modal hide fade">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+          <h3>Welcome to Scribbler</h3>
+        </div>
+        <div class="modal-body">
+          <!-- Carousel -->
+          <div id="myCarousel" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="item active">
+                <div>
+                  <h2>Step 1:</h2>
+                  <h3>Grab something green. Anything will do, but brighter greens and good lighting work best.</h3>
+                </div>
+                <div class="greenImg">
+                  <img class="greenCrayon" src="./img/crayon.png"></img>
+                  <img class="greenApple" src="./img/gam.png"></img>
+                  <img class="greenLeaf" src="./img/greenleaf1.png"></img>
+                </div>
+              </div>
+              <div class="item">
+                <h2>Step 2:</h2>
+                <div class="slide2Img">
+                  <div class="allow">
+                    <img class="allowImg" src="./img/allow.png"></img>
+                  </div>
+                  <span id="paint-button" class="button slide2Draw"> <p><i class="icon-pencil"></i>Draw</p></span>
+                </div>
+                <span class="step2">
+                  <h3>In order to begin drawing, your browser will ask for access to your webcam. Click 'Allow', then 'Draw' and you're ready to go.</h3>
+                </span>
+              </div>
+              <div class="item">
+                <h2>Step 3:</h2>
+                <div class="slide3Img">
+                  <span id="speech-button" class="button slide3Draw"> <p><i class="icon-microphone"></i>Talk</p> </span>
+                  <div class="allow">
+                    <img class="allowImg" src="./img/allow.png"></img>
+                  </div>
+                </div>
+                <span class="step3">
+                <h3>Choose colors manually or with your voice. Click 'Talk', allow use of your microphone, and say the name of the color you want to paint with.</h3>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- /.carousel -->
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-primary skip">Skip</a>
+          <a href="#myCarousel" class="btn next" data-slide="next">Next</a>
+        </div>
+      </div>
+      <!-- MODAL END -->
+    </div><!-- /.body_container -->
+  </body>
+  <!-- new scripts -->
+  <script src="src/helpers.js"></script>
+  <script src="src/main.js"></script>
+  <script src="src/record.js"></script>
+  <script src="src/eraser.js"></script>
+  <script src="src/paint.js"></script>
+  <script src="src/rgb2hsl.js"></script>
+  <script src="src/speech.js"></script>
+  <script src="src/background.js"></script>
+  <script src="src/saveimage.js"></script>
+  <script src="src/snapshot.js"></script>
+  <script src="src/flipcanvas.js"></script>
+  <!-- Production JS -->
+  <!--<script src="src/flipcanvas.js"></script>-->
+</html>
+
+

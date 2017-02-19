@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "launch index.html",
+      "type": "chrome",
+      "request": "launch",
+      "file": "${workspaceRoot}/SpecRunner.html"
+    },
+    {
+      "name": "Attach to Chrome",
+      "type": "chrome",
+      "request": "attach",
+      "port": 9222,
+      "webRoot": "${workspaceRoot}"
+    }
+  ]
+}

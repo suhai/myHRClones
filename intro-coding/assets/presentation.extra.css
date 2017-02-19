@@ -1,0 +1,53 @@
+.reveal p {
+  text-align: left;
+  line-height: 1.1;
+  color: #6b3362;
+}
+
+.reveal li {
+  text-align: left;
+  line-height: 1.1;
+  color: #6b3362;
+}
+
+.reveal {
+  background-color: #ecf3ec;
+  color: #6b3362;
+  font-family: arial;
+}
+
+.reveal h1 {
+  font-family: arial;
+  color: #6b3362;
+}
+
+.reveal h2 {
+  font-family: arial;
+  color: #6b3362;
+}
+
+.reveal h3 {
+  font-family: arial;
+  color: #6b3362;
+}
+
+.reveal pre {
+  font-family: arial;
+}
+.reveal code {
+  font-family: arial;
+}
+
+#logo-container {
+  position: absolute;
+  top: 0;
+  left: -25px;
+}
+
+#logo-image {
+  max-width: 150px;
+}
+
+#sec-title-slide h2 {
+  font-size: 48px;
+}
