@@ -1,80 +1,84 @@
 @charset "UTF-8";
-/* CSS Document */
+
+/* CSS Document in here */
+
 
 /** Structure */
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  font-size: 14px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    font-size: 14px;
 }
 
 #system-error {
-  font-size: 1.5em;
-  text-align: center;
+    font-size: 1.5em;
+    text-align: center;
 }
 
-#json, #xml {
-  display: none;
+#json,
+#xml {
+    display: none;
 }
 
 #header {
-  position: fixed;
-  width: 100%;
+    position: fixed;
+    width: 100%;
 }
 
 #specs {
-  padding-top: 50px;
+    padding-top: 50px;
 }
 
 #header .angular {
-  font-family: Courier New, monospace;
-  font-weight: bold;
+    font-family: Courier New, monospace;
+    font-weight: bold;
 }
 
 #header h1 {
-  font-weight: normal;
-  float: left;
-  font-size: 30px;
-  line-height: 30px;
-  margin: 0;
-  padding: 10px 10px;
-  height: 30px;
+    font-weight: normal;
+    float: left;
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0;
+    padding: 10px 10px;
+    height: 30px;
 }
 
 #application h2,
 #specs h2 {
-  margin: 0;
-  padding: 0.5em;
-  font-size: 1.1em;
+    margin: 0;
+    padding: 0.5em;
+    font-size: 1.1em;
 }
 
 #status-legend {
-  margin-top: 10px;
-  margin-right: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
 }
 
 #header,
 #application,
 .test-info,
 .test-actions li {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 #application {
-  margin: 10px;
+    margin: 10px;
 }
 
 #application iframe {
-  width: 100%;
-  height: 758px;
+    width: 100%;
+    height: 758px;
 }
 
 #application .popout {
-  float: right;
+    float: right;
 }
 
 #application iframe {
-  border: none;
+    border: none;
 }
 
 .tests li,
@@ -82,166 +86,167 @@ body {
 .test-it li,
 .test-it ol,
 .status-display {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 .tests,
 .test-it ol,
 .status-display {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .test-info {
-  margin-left: 1em;
-  margin-top: 0.5em;
-  border-radius: 8px 0 0 8px;
-  -webkit-border-radius: 8px 0 0 8px;
-  -moz-border-radius: 8px 0 0 8px;
-  cursor: pointer;
+    margin-left: 1em;
+    margin-top: 0.5em;
+    border-radius: 8px 0 0 8px;
+    -webkit-border-radius: 8px 0 0 8px;
+    -moz-border-radius: 8px 0 0 8px;
+    cursor: pointer;
 }
 
 .test-info:hover .test-name {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 .test-info .closed:before {
-  content: '\25b8\00A0';
+    content: '\25b8\00A0';
 }
 
 .test-info .open:before {
-  content: '\25be\00A0';
-  font-weight: bold;
+    content: '\25be\00A0';
+    font-weight: bold;
 }
 
 .test-it ol {
-  margin-left: 2.5em;
+    margin-left: 2.5em;
 }
 
 .status-display,
 .status-display li {
-  float: right;
+    float: right;
 }
 
 .status-display li {
-  padding: 5px 10px;
+    padding: 5px 10px;
 }
 
 .timer-result,
 .test-title {
-  display: inline-block;
-  margin: 0;
-  padding: 4px;
+    display: inline-block;
+    margin: 0;
+    padding: 4px;
 }
 
 .test-actions .test-title,
 .test-actions .test-result {
-  display: table-cell;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+    display: table-cell;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 }
 
 .test-actions {
-  display: table;
+    display: table;
 }
 
 .test-actions li {
-  display: table-row;
+    display: table-row;
 }
 
 .timer-result {
-  width: 4em;
-  padding: 0 10px;
-  text-align: right;
-  font-family: monospace;
+    width: 4em;
+    padding: 0 10px;
+    text-align: right;
+    font-family: monospace;
 }
 
 .test-it pre,
 .test-actions pre {
-  clear: left;
-  color: black;
-  margin-left: 6em;
+    clear: left;
+    color: black;
+    margin-left: 6em;
 }
 
 .test-describe {
-  padding-bottom: 0.5em;
+    padding-bottom: 0.5em;
 }
 
 .test-describe .test-describe {
-  margin: 5px 5px 10px 2em;
+    margin: 5px 5px 10px 2em;
 }
 
 .test-actions .status-pending .test-title:before {
-  content: '\00bb\00A0';
+    content: '\00bb\00A0';
 }
 
 .scrollpane {
-   max-height: 20em;
-   overflow: auto;
+    max-height: 20em;
+    overflow: auto;
 }
+
 
 /** Colors */
 
 #header {
-  background-color: #F2C200;
+    background-color: #F2C200;
 }
 
 #specs h2 {
-  border-top: 2px solid #BABAD1;
+    border-top: 2px solid #BABAD1;
 }
 
 #specs h2,
 #application h2 {
-  background-color: #efefef;
+    background-color: #efefef;
 }
 
 #application {
-  border: 1px solid #BABAD1;
+    border: 1px solid #BABAD1;
 }
 
 .test-describe .test-describe {
-  border-left: 1px solid #BABAD1;
-  border-right: 1px solid #BABAD1;
-  border-bottom: 1px solid #BABAD1;
+    border-left: 1px solid #BABAD1;
+    border-right: 1px solid #BABAD1;
+    border-bottom: 1px solid #BABAD1;
 }
 
 .status-display {
-  border: 1px solid #777;
+    border: 1px solid #777;
 }
 
 .status-display .status-pending,
 .status-pending .test-info {
-  background-color: #F9EEBC;
+    background-color: #F9EEBC;
 }
 
 .status-display .status-success,
 .status-success .test-info {
-  background-color: #B1D7A1;
+    background-color: #B1D7A1;
 }
 
 .status-display .status-failure,
 .status-failure .test-info {
-  background-color: #FF8286;
+    background-color: #FF8286;
 }
 
 .status-display .status-error,
 .status-error .test-info {
-  background-color: black;
-  color: white;
+    background-color: black;
+    color: white;
 }
 
 .test-actions .status-success .test-title {
-  color: #30B30A;
+    color: #30B30A;
 }
 
 .test-actions .status-failure .test-title {
-  color: #DF0000;
+    color: #DF0000;
 }
 
 .test-actions .status-error .test-title {
-  color: black;
+    color: black;
 }
 
 .test-actions .timer-result {
-  color: #888;
+    color: #888;
 }
